@@ -3,7 +3,7 @@ const Header = ({version, setVersion}) => {
   return (
     <header>
         <div id="header-left">
-          <div id="button-group">
+          <div id="version-buttons">
             {versionNames.map((versionName) => (
               <button 
                 key={versionName} // me lo pide la consola
@@ -15,10 +15,12 @@ const Header = ({version, setVersion}) => {
             ))}
           </div>
         </div>
+
         <div id="title">
             <img src="icon.png"/>
             Battle Facilities Pokédex
         </div>
+        
         <div id="header-right">
             <a href="https://github.com/dldelpino/battle-frontier-pokedex" target="_blank"><img src="github.png"/></a>
         </div>

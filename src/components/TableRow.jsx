@@ -44,11 +44,11 @@ const TableRow = ({row, id}) => {
         {row["Item"]}
       </td>
 
-      {row["Moves"].map(move => {
+      {row["Moves"].map((move, id) => {
         const type = moveTypes[move]
         const color = typeColors[type]
         return (
-          <td width="120px">
+          <td width="120px" key={id}>
             <div style={{borderRadius: '10px', backgroundColor: color, color: 'white', paddingTop: '5px', paddingBottom: '5px', marginLeft: '3px', marginRight: '3px'}}>
               {move}
             </div>
@@ -60,9 +60,9 @@ const TableRow = ({row, id}) => {
         {row["Nature"]}
       </td>
 
-      {row["EVs"].map(value => {
+      {row["EVs"].map((value, id) => {
         return (
-          <td width="50px">
+          <td width="50px" key={id}>
             {value}
           </td>
         )
@@ -83,9 +83,9 @@ const TableRow = ({row, id}) => {
           opacity: isVisible ? 1 : 0,
           backgroundColor: 'inherit'
         }}>
-          {isVisible && (row["Trainers"].map(trainer => {
+          {isVisible && (row["Trainers"].map((trainer, id) => {
             return (
-              <React.Fragment>
+              <React.Fragment key={id}>
                 {trainer}
                 <br/>
               </React.Fragment>

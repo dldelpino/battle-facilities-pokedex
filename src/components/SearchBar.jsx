@@ -69,10 +69,10 @@ const SearchBar = ({version}) => {
               placeholder="Search by Pokémon, item, move, nature, trainer..."
               value={search} // hace el texto introducido en el input sea la variable de estado search
               onChange={(e) => setSearch(e.target.value)}
-              // onChange={e => setSearch(e.target.value)}
-              // e es el evento que se produce al cambiar el valor del input, e.target es el elemento donde tiene lugar el evento (en este caso, <input>), e.target.value devuelve la propiedad value del input, que es el texto que hay en el input en ese momento
+              // e es el evento que se produce al cambiar el valor del input; e.target es el elemento donde tiene lugar el evento (en este caso, <input>); e.target.value devuelve la propiedad value del input, que es el texto que hay en el input en ese momento
           />
       </div>
+
       <Table rows={
         (filteredSets.length > 350) ? ["Use the search bar to filter the data."] :
         (filteredSets.length == 0) ? ["No results found."] :
