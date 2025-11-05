@@ -10,7 +10,7 @@
 
 html {
   overflow-y: scroll;
-  background-image: url("background.png");
+  background-image: url("https://raw.githubusercontent.com/dldelpino/battle-facilities-pokedex/refs/heads/main/public/background.png");
   background-size: 240px 50px;
 }
 
